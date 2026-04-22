@@ -1,6 +1,6 @@
 # Git – Practical Reference Guide
 
-> A structured overview for getting started and working with Git on a daily basis.
+A structured overview for working with Git.
 
 ---
 
@@ -32,6 +32,7 @@ Working Directory  →  Staging Area  →  Repository  →  Remote
 - **Repository**: The permanent, committed history of all snapshots.
 - **Remote**: The shared server (GitHub / GitLab) that others push to and pull from.
 
+> [!NOTE]
 > **GitHub or GitLab?** Both platforms use the exact same Git commands. GitHub is more common for open-source projects; GitLab offers more built-in CI/CD features and is often self-hosted. For getting started, the difference is practically irrelevant.
 
 ---
@@ -65,6 +66,7 @@ git config user.name "First Last"
 git config user.email "name@example.com"
 ```
 
+> [!TIP]
 > **Optional – set globally:** If you always use the same name and email, you can add `--global`. The setting then applies to all repos on your system and is saved in `~/.gitconfig`:
 > ```bash
 > git config --global user.name "First Last"
@@ -87,7 +89,8 @@ After the next login, credentials are saved in plain text in `~/.git-credentials
 git config credential.helper cache
 ```
 
-> **Note:** Avoid `--global` here – different repositories may use different accounts or servers (e.g. GitHub vs. a self-hosted GitLab), and a global credential helper can cause the wrong credentials to be used.
+> [!NOTE]
+> Avoid `--global` here – different repositories may use different accounts or servers (e.g. GitHub vs. a self-hosted GitLab), and a global credential helper can cause the wrong credentials to be used.
 
 ---
 
@@ -228,7 +231,7 @@ How to resolve:
 ```bash
 git rebase main   # replay current branch on top of main (linear history)
 ```
-
+> [!TIP]
 > **General rule:** Use `merge` for shared branches, `rebase` only locally and only if you know what you're doing.
 
 ---
@@ -296,6 +299,7 @@ git restore path/to/file.txt
 git restore path/to/folder/    # entire folder
 ```
 
+> [!CAUTION]
 > Discards all local changes to the file – this cannot be undone!
 
 ---
@@ -312,7 +316,9 @@ git reset path/to/file.txt
 ```bash
 git restore --staged path/to/file.txt
 ```
-> ⚠️ Warning: If you forget `--staged`, the file changes will be discarded. Prefer `git reset` for safety.
+
+> [!CAUTION]
+> If you forget `--staged`, the file changes will be discarded. Prefer `git reset` for safety.
 
 ---
 
@@ -330,7 +336,7 @@ git reset
 |---|---|
 | `git reset HEAD~1` | Go back 1 commit; files are **unstaged** (changes preserved) |
 | `git reset --soft HEAD~1` | Go back 1 commit; files remain **staged** |
-| `git reset --hard HEAD~1` | Go back 1 commit; changes are **permanently deleted** ⚠️ |
+| `git reset --hard HEAD~1` | Go back 1 commit; changes are **permanently deleted** |
 
 ```bash
 # Example: undo last commit, keep changes
@@ -340,7 +346,8 @@ git reset HEAD~1
 git reset HEAD~3
 ```
 
-> **Golden rule:** Only use `--hard` when you are 100% certain. Consider using `git stash` before discarding changes.
+> [!WARNING]
+> Only use `--hard` when you are 100% certain. Consider using `git stash` before discarding changes.
 
 ---
 
