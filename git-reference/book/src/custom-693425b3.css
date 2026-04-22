@@ -1,0 +1,43 @@
+/* Helle Themes */
+html.light pre,
+html.light .hljs,
+html.rust pre,
+html.rust .hljs {
+  background: #f6f8fa !important;
+  color: #24292e !important;
+}
+
+/* Dunkle Themes */
+html.coal pre,
+html.coal .hljs,
+html.navy pre,
+html.navy .hljs,
+html.ayu pre,
+html.ayu .hljs {
+  background: #282c34 !important;
+  color: #abb2bf !important;
+}
+
+/* Print – immer hell */
+@media print {
+  pre, .hljs {
+    background: #f6f8fa !important;
+    color: #24292e !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+@media print {
+  .warning::before {
+    content: "⚠";
+    color: #f0ad4e;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+blockquote {
+  border-left: 4px solid #f0ad4e;
+  background: #fff8e1;
+}

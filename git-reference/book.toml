@@ -1,0 +1,10 @@
+[book]
+title = "Practical Guide for Git"
+authors = ["Matteo Ruby"]
+language = "en"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+
+additional-css = ["src/custom.css"]
