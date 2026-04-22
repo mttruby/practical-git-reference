@@ -351,6 +351,52 @@ git reset HEAD~3
 
 ---
 
+### I want to see what I've changed
+
+| Command | Effect |
+|---|---|
+| `git diff` | Show unstaged changes (working directory vs. last commit) |
+| `git diff --staged` | Show staged changes (what will go into the next commit) |
+| `git diff HEAD` | Show **all** changes – staged + unstaged combined |
+| `git diff <commit>` | Compare working directory against a specific commit |
+| `git diff <branch>` | Compare working directory against another branch |
+
+```bash
+# See all unstaged changes
+git diff
+
+# See what's already staged
+git diff --staged
+
+# Compare with a specific commit hash
+git diff a1b2c3d
+```
+
+> [!NOTE]
+> `git diff` only shows changes that haven't been committed yet. Once committed, use `git log -p` or `git diff <commit1> <commit2>` to compare commits.
+
+---
+
+### I want to check out a single file from another branch
+
+| Command | Effect |
+|---|---|
+| `git checkout <branch> -- <file>` | Restore a file from another branch into your working directory |
+| `git checkout <commit> -- <file>` | Same, but from a specific commit |
+
+```bash
+# Get a single file from another branch
+git checkout main -- src/config.ts
+
+# Get a file from a specific commit
+git checkout a1b2c3d -- src/config.ts
+```
+
+> [!WARNING]
+> This **immediately overwrites** the file in your working directory without a confirmation prompt. Stage or stash local changes first if you want to keep them.
+
+---
+
 ## Other stuff?
 
 The following topics were hinted at in the notes or are valuable for a complete introduction:
