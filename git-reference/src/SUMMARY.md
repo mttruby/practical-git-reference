@@ -1,3 +1,3 @@
 # Summary
 
-- [Mein Buch](book.md)
+- [Practical Git Guide](book.md)
