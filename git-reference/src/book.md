@@ -406,5 +406,4 @@ The following topics were hinted at in the notes or are valuable for a complete 
 - **Pull Requests / Merge Requests** – the review process on GitHub/GitLab; central for teams
 - **SSH key setup** – a more secure alternative to password/token credentials
 - **Tags** – marking releases with `git tag v1.0.0`
-- **`git diff`** – inspect exactly what changed before staging
 - **Fork workflow** – for contributing to third-party projects
