@@ -2,7 +2,6 @@
 title = "Practical Guide for Git"
 authors = ["Matteo Ruby"]
 language = "en"
-build-dir = "docs"
 
 [output.html]
 default-theme = "light"
