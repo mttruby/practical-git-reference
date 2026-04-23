@@ -2,6 +2,9 @@
 
 A structured overview for working with Git.
 
+> [!NOTE]
+> This guide was put together as a quick reference for fellow participants of our university course. It focuses on the Git basics most relevant for collaborating on a shared project. Things like branches, commits, and undoing mistakes. For a complete Git reference, check out the [official Git documentation](https://git-scm.com/doc).
+
 ---
 
 ## Table of Contents
